@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eswari Madhavarapu | Full Stack Developer</title>
+<meta name="description" content="Full Stack Developer building React, Python and PostgreSQL applications, including AI-assisted RAG platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080D1C;--bg2:#0E1630;--card:#101A36;--ink:#EAF0FF;--mut:#95A3C4;--line:#22305A;--c1:#22D3EE;--c2:#34D399;--c3:#FBBF24;--c4:#F472B6;--acc:#22D3EE;--on:#04222B;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#F4F7FD;--bg2:#E7EEFA;--card:#fff;--ink:#0C1633;--mut:#4B5A7C;--line:#CCD7EC;--acc:#0A7EA4;--c1:#0A7EA4;--c2:#1B9A6E;--c3:#C58A00;--c4:#C2407E;--on:#fff}}
+:root[data-theme="light"]{--bg:#F4F7FD;--bg2:#E7EEFA;--card:#fff;--ink:#0C1633;--mut:#4B5A7C;--line:#CCD7EC;--acc:#0A7EA4;--c1:#0A7EA4;--c2:#1B9A6E;--c3:#C58A00;--c4:#C2407E;--on:#fff}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,"Trebuchet MS",system-ui,sans-serif;margin:0;line-height:1.1;letter-spacing:-.02em}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--c3);outline-offset:3px}
+.w{max-width:1120px;margin:0 auto;padding:0 22px}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--c1),var(--c4));z-index:30}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;justify-content:space-between;align-items:center;height:62px;gap:14px}
+.logo{font:800 1.15rem Sora,sans-serif;color:var(--ink);text-decoration:none}
+.logo i{font-style:normal;color:var(--acc)}
+.nav nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav nav a{color:var(--mut);text-decoration:none;font-weight:500;font-size:.95rem;padding:6px 10px;border-radius:8px;transition:color .2s,background .2s}
+.nav nav a:hover{color:var(--ink);background:var(--bg2)}
+@media(max-width:640px){.nav nav a:nth-child(-n+2){display:none}}
+.hero{position:relative;overflow:hidden;padding:64px 0 80px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:var(--c1);top:-140px;left:-120px}
+.b2{width:380px;height:380px;background:var(--c4);bottom:-160px;right:-100px;animation-delay:-6s}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.15)}}
+.hero .w{position:relative;display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.hero .w{grid-template-columns:1.05fr 1fr}}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--mut);margin-bottom:20px}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c2);box-shadow:0 0 0 0 var(--c2);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px transparent}}
+h1{font-size:clamp(2.7rem,7.4vw,5rem);font-weight:800}
+h1 span{background:linear-gradient(100deg,var(--c1),var(--c4));-webkit-background-clip:text;background-clip:text;color:transparent}
+.type{font:700 clamp(1.15rem,2.6vw,1.5rem) Sora,sans-serif;margin:18px 0 14px;min-height:1.6em}
+.type::after{content:"";display:inline-block;width:3px;height:1.1em;background:var(--acc);margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--mut);max-width:50ch;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:1.5px solid var(--acc);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px -8px var(--acc)}
+.btn.p{background:var(--acc);color:var(--on)}
+.btn.s{color:var(--acc)}
+.stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.stats b{display:block;font:800 2rem Sora,sans-serif}
+.stats span{color:var(--mut);font-size:.88rem}
+.scene{position:relative;height:400px;perspective:1100px;display:grid;place-items:center}
+.float{animation:fl 6s ease-in-out infinite;transform-style:preserve-3d}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.iso{position:relative;width:220px;height:220px;transform-style:preserve-3d;transform:rotateX(calc(58deg + var(--ty,0deg))) rotateZ(calc(-38deg + var(--tx,0deg)));transition:transform .25s ease-out}
+.slab{position:absolute;inset:0;transform:translateZ(calc(var(--z)*46px));transform-style:preserve-3d;display:flex;align-items:flex-end;padding:12px;border:2px solid var(--c);border-radius:14px;background:color-mix(in srgb,var(--c) 22%,var(--bg2));color:var(--ink);font:700 .95rem Sora,sans-serif;cursor:pointer;box-shadow:0 0 0 0 var(--c);transition:transform .3s,box-shadow .3s,background .3s}
+.slab:hover,.slab[aria-pressed="true"]{transform:translateZ(calc(var(--z)*46px + 22px));box-shadow:0 0 34px 2px var(--c);background:color-mix(in srgb,var(--c) 45%,var(--bg2))}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.legend button{display:flex;align-items:center;gap:8px;font:500 .85rem "DM Sans",sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.legend button::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--c)}
+.legend button[aria-pressed="true"]{border-color:var(--c)}
+#status{min-height:1.6em;color:var(--mut);font-size:.88rem;margin:8px 0 0}
+.mq{overflow:hidden;border-block:1px solid var(--line);background:var(--bg2);padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite;font:700 1.05rem Sora,sans-serif;color:var(--mut)}
+.mq:hover div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:88px 0}
+.h{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:34px}
+.about{display:grid;gap:30px}
+@media(min-width:900px){.about{grid-template-columns:1.3fr 1fr}}
+.about p{margin:0 0 16px;color:var(--mut);max-width:62ch;font-size:1.05rem}
+.facts{display:grid;gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:104px 1fr;gap:16px;align-items:center}
+.fact b{font:800 1.7rem/1 Sora,sans-serif;color:var(--acc)}
+.fact span{line-height:1.45}
+.grid{display:grid;gap:20px}
+@media(min-width:800px){.grid{grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}}
+.card{position:relative;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--acc) 20%,transparent),transparent 60%),var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:opacity .3s,transform .3s,border-color .3s}
+.card:hover{border-color:var(--acc);transform:translateY(-4px)}
+.card.dim{opacity:.25}
+.card h3{font-size:1.45rem}
+.when{color:var(--mut);font-size:.9rem;margin:6px 0 14px}
+.card ul{margin:0 0 16px;padding-left:18px}
+.card li{margin-bottom:7px;color:var(--mut)}
+ul.chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.chips li{background:color-mix(in srgb,var(--acc) 14%,transparent);border:1px solid color-mix(in srgb,var(--acc) 35%,transparent);color:var(--ink);border-radius:999px;padding:3px 12px;font-size:.82rem;font-weight:500;margin:0}
+.tl{position:relative;padding-left:30px;display:grid;gap:34px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--c1),var(--c4));transform:scaleY(var(--p,0));transform-origin:top}
+.tl>div{position:relative}
+.tl>div::before{content:"";position:absolute;left:-33px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--acc)}
+.tl h3{font-size:1.35rem}
+.tl ul{margin:12px 0 0;padding-left:18px;color:var(--mut);max-width:70ch}
+.skills{display:grid;gap:16px}
+@media(min-width:800px){.skills{grid-template-columns:1fr 1fr}}
+.skills>div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.skills h3{font-size:1.1rem;margin-bottom:12px}
+.cta{text-align:center;background:linear-gradient(135deg,color-mix(in srgb,var(--c1) 22%,var(--card)),color-mix(in srgb,var(--c4) 22%,var(--card)));border:1px solid var(--line);border-radius:26px;padding:60px 24px}
+.cta h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
+.cta p{color:var(--mut);margin:0 auto 26px;max-width:46ch}
+button.btn{font:inherit;font-weight:700;background:none;cursor:pointer}
+.links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:24px;color:var(--mut)}
+footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.9rem}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+@media(max-width:520px){.scene{height:330px}.iso{width:170px;height:170px}.slab{transform:translateZ(calc(var(--z)*36px))}.slab:hover,.slab[aria-pressed="true"]{transform:translateZ(calc(var(--z)*36px + 18px))}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header class="nav"><div class="w"><a class="logo" href="#top">Eswari <i>M.</i></a>
+<nav aria-label="Main"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+
+<main id="top">
+<div class="hero">
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="w">
+<div>
+<div class="pill">Open to full stack roles</div>
+<h1>Eswari<br><span>Madhavarapu</span></h1>
+<p class="type" aria-hidden="true" id="type"></p>
+<p class="lead"><span style="position:absolute;left:-9999px">Full Stack Developer.</span>I build web and mobile applications from the screen a user taps to the database behind it, using React, Python and PostgreSQL, including AI-assisted platforms powered by RAG.</p>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn s" href="#contact">Email me</a><a class="btn s" href="https://github.com/Eswarimadhavarapu" target="_blank" rel="noopener">GitHub</a></div>
+<div class="stats">
+<div><b><span class="cnt" data-to="1.5" data-suf="+">0</span></b><span>years experience</span></div>
+<div><b><span class="cnt" data-to="5">0</span></b><span>applications delivered</span></div>
+<div><b><span class="cnt" data-to="3">0</span></b><span>layers in one AI platform</span></div>
+</div>
+</div>
+<div>
+<div class="scene" id="scene"><div class="float"><div class="iso" id="iso">
+<button class="slab" style="--z:0;--c:var(--c3)" data-l="data" aria-pressed="false">Data</button>
+<button class="slab" style="--z:1;--c:var(--c2)" data-l="api" aria-pressed="false">API</button>
+<button class="slab" style="--z:2;--c:var(--c4)" data-l="ai" aria-pressed="false">AI</button>
+<button class="slab" style="--z:3;--c:var(--c1)" data-l="ui" aria-pressed="false">Interface</button>
+</div></div></div>
+<div class="legend" role="group" aria-label="Filter projects by stack layer">
+<button style="--c:var(--c1)" data-l="ui" aria-pressed="false">Interface</button>
+<button style="--c:var(--c2)" data-l="api" aria-pressed="false">API</button>
+<button style="--c:var(--c3)" data-l="data" aria-pressed="false">Data</button>
+<button style="--c:var(--c4)" data-l="ai" aria-pressed="false">AI</button>
+</div>
+<p id="status" aria-live="polite">Select a layer to highlight the projects that use it.</p>
+</div>
+</div>
+</div>
+
+<div class="mq" aria-hidden="true"><div><span>React.js</span><span>Next.js</span><span>React Native</span><span>Python</span><span>FastAPI</span><span>Flask</span><span>Node.js</span><span>PostgreSQL</span><span>pgvector</span><span>Redis</span><span>RAG</span><span>Docker</span><span>React.js</span><span>Next.js</span><span>React Native</span><span>Python</span><span>FastAPI</span><span>Flask</span><span>Node.js</span><span>PostgreSQL</span><span>pgvector</span><span>Redis</span><span>RAG</span><span>Docker</span></div></div>
+
+<section id="about"><div class="w">
+<h2 class="h rv">About me</h2>
+<div class="about rv">
+<div>
+<p>I am a Full Stack Developer with 1.5+ years of professional experience and a 6-month MERN internship. I have delivered 5 applications across AI-assisted, regulatory, healthcare and contractor-management domains.</p>
+<p>My work covers responsive interfaces, backend services, authentication (OTP, token-based, Google sign-in), database integration and business workflows. I turn requirements into working features and fix defects across every layer.</p>
+</div>
+<div class="facts">
+<div class="fact"><b>RAG</b><span>Chunking, embeddings and pgvector retrieval in production work</span></div>
+<div class="fact"><b>5</b><span>authentication paths shipped in one platform</span></div>
+<div class="fact"><b>B.Tech</b><span>Electronics and Communication, Aditya College of Engineering and Technology</span></div>
+</div>
+</div>
+</div></section>
+
+<section id="projects" style="padding-top:0"><div class="w">
+<h2 class="h rv">Projects</h2>
+<div class="grid">
+<article class="card wide rv" data-l="ui api data ai">
+<h3>Recovery Companion</h3><p class="when">Aug 2026 to present</p>
+<ul>
+<li>AI-assisted recovery support platform across a React Native mobile app, a Next.js clinician web app and a FastAPI backend.</li>
+<li>Five authentication paths: register, login, Google sign-in, anonymous identity and token refresh, with persistent access and refresh tokens.</li>
+<li>RAG pipeline (document chunking, embeddings, pgvector) feeds an AI Gateway that adds retrieved knowledge to each conversation before calling an AI provider.</li>
+<li>Conversations, history and safety events stored in PostgreSQL.</li>
+</ul>
+<ul class="chips"><li>React Native</li><li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>pgvector</li><li>Redis</li><li>RAG</li></ul>
+</article>
+<article class="card rv" data-l="ui api data">
+<h3>Ontract Application</h3><p class="when">Ongoing</p>
+<ul>
+<li>Contractor and business management platform: RFQs, quotations, negotiations, Work Orders and ratings.</li>
+<li>Admin and Contractor RFQ flows, Work Order assignment and lifecycle tracking with business-rule validation.</li>
+<li>Mobile fixes for table scrolling, dropdown overlays and page overflow.</li>
+</ul>
+<ul class="chips"><li>React.js</li><li>Flask</li><li>PostgreSQL</li></ul>
+</article>
+<article class="card rv" data-l="ui api data">
+<h3>AP RERA Application</h3><p class="when">Feb 2026 to Jul 2026</p>
+<ul>
+<li>Real-estate regulatory platform: Complaint Registration, Legal Dashboard, Project and Agent Registration.</li>
+<li>Multiple respondents, case-number generation, search and document uploads.</li>
+<li>Admin OTP login, password reset, plus PAN, Aadhaar and IFSC validation.</li>
+</ul>
+<ul class="chips"><li>React.js</li><li>Vite</li><li>Flask</li><li>PostgreSQL</li></ul>
+</article>
+<article class="card rv" data-l="ui api data">
+<h3>Healthcare Application</h3><p class="when">Nov 2025 to Jan 2026</p>
+<ul>
+<li>Doctor appointment scheduling, a medical-product store and patient-record access in one web app.</li>
+<li>REST services and database work for patient records and transaction history.</li>
+</ul>
+<ul class="chips"><li>React.js</li><li>Python</li><li>REST APIs</li></ul>
+</article>
+<article class="card rv" data-l="api">
+<h3>Hathway Application</h3><p class="when">Apr 2025 to Oct 2025</p>
+<ul>
+<li>Supported server-side components and system operations, resolved technical issues and contributed to feature enhancements.</li>
+</ul>
+<ul class="chips"><li>Server-side components</li><li>System engineering</li></ul>
+</article>
+</div>
+</div></section>
+
+<section id="experience" style="padding-top:0"><div class="w">
+<h2 class="h rv">Experience</h2>
+<div class="tl" id="tl">
+<div class="rv">
+<h3>Full Stack Developer, Jhaishna Technologies</h3>
+<p class="when">Vijayawada, India. Apr 2025 to present</p>
+<ul>
+<li>Own feature delivery across 5 applications, from requirements to release.</li>
+<li>Develop responsive React.js interfaces linked to Python REST services (Flask, FastAPI) and PostgreSQL-backed workflows.</li>
+<li>Handle authentication, form validation, API integration and data management, and diagnose defects across frontend, backend and database layers.</li>
+</ul>
+</div>
+<div class="rv">
+<h3>Full Stack Developer Intern, BRN Infotech</h3>
+<p class="when">Hyderabad, India. Sep 2023 to Feb 2024</p>
+<ul>
+<li>Contributed web application features using the MERN stack (MongoDB, Express.js, React, Node.js).</li>
+<li>Designed RESTful APIs with Node.js and Express.js and integrated third-party APIs.</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section id="skills" style="padding-top:0"><div class="w">
+<h2 class="h rv">Skills</h2>
+<div class="skills">
+<div class="rv"><h3>Frontend</h3><ul class="chips"><li>React.js</li><li>React Native (Expo)</li><li>Next.js</li><li>JavaScript (ES6+)</li><li>HTML5</li><li>CSS3</li><li>Vite</li><li>Responsive design</li></ul></div>
+<div class="rv"><h3>Backend</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>Flask</li><li>Node.js</li><li>Express.js</li><li>Java</li><li>Spring Boot</li><li>REST APIs</li></ul></div>
+<div class="rv"><h3>Databases</h3><ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Oracle</li><li>SQL</li><li>Redis</li></ul></div>
+<div class="rv"><h3>AI and tools</h3><ul class="chips"><li>RAG</li><li>Embeddings</li><li>pgvector</li><li>AI Gateway</li><li>Git</li><li>Docker</li><li>AWS</li></ul></div>
+</div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="w">
+<div class="cta rv">
+<h2>Let's build something together</h2>
+<p>I am open to full stack roles. Email is the fastest way to reach me.</p>
+<p style="font:700 1.2rem Sora,sans-serif;color:var(--ink);user-select:all" id="em">eswarimadhavarapu912@gmail.com</p><div class="btns" style="justify-content:center"><a class="btn p" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eswarimadhavarapu912@gmail.com&amp;su=Opportunity%20for%20Full%20Stack%20Developer" target="_blank" rel="noopener">Write in Gmail</a><button class="btn s" type="button" id="cp">Copy email</button><a class="btn s" href="https://github.com/Eswarimadhavarapu" target="_blank" rel="noopener">GitHub</a><a class="btn s" href="https://www.linkedin.com/in/eswari-madhavarapu-8a09672a7/" target="_blank" rel="noopener">LinkedIn</a></div><p id="cps" aria-live="polite" style="min-height:1.6em;margin:14px auto 0;text-align:center;max-width:none"></p>
+<div class="links"><a href="tel:+919392898593">+91 9392898593</a><span>Vijayawada, Andhra Pradesh, India</span></div>
+</div>
+</div></section>
+</main>
+<footer>Eswari Madhavarapu, Full Stack Developer</footer>
+
+<script>
+(function(){
+var d=document,de=d.documentElement,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+de.classList.add('js');
+var bar=d.getElementById('bar'),tl=d.getElementById('tl');
+function sc(){var h=de.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';
+ var r=tl.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.75-r.top)/r.height));tl.style.setProperty('--p',rm?1:p)}
+addEventListener('scroll',sc,{passive:true});sc();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+function count(el){var to=+el.dataset.to,suf=el.dataset.suf||'',dec=String(to).indexOf('.')>-1?1:0,t0=null;
+ if(rm){el.textContent=to.toFixed(dec)+suf;return}
+ (function f(t){t0=t0||t;var k=Math.min(1,(t-t0)/1400),v=to*(1-Math.pow(1-k,3));el.textContent=v.toFixed(dec)+(k===1?suf:'');if(k<1)requestAnimationFrame(f)})(performance.now())}
+d.querySelectorAll('.cnt').forEach(count);
+var roles=['Full Stack Developer','React + FastAPI builder','RAG application developer'],ti=0,ci=0,del=false,ty=d.getElementById('type');
+function tick(){var s=roles[ti];ci+=del?-1:1;ty.textContent=s.slice(0,ci);var w=del?35:75;
+ if(!del&&ci===s.length){del=true;w=1600}else if(del&&ci===0){del=false;ti=(ti+1)%roles.length;w=350}setTimeout(tick,w)}
+if(rm){ty.textContent=roles[0]}else{tick()}
+var iso=d.getElementById('iso'),sn=d.getElementById('scene');
+if(!rm){sn.addEventListener('pointermove',function(e){var r=sn.getBoundingClientRect();
+ iso.style.setProperty('--tx',((e.clientX-r.left)/r.width-.5)*22+'deg');iso.style.setProperty('--ty',((e.clientY-r.top)/r.height-.5)*-14+'deg')});
+ sn.addEventListener('pointerleave',function(){iso.style.setProperty('--tx','0deg');iso.style.setProperty('--ty','0deg')})}
+d.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')})});
+var fb=d.querySelectorAll('[data-l][aria-pressed]'),cards=d.querySelectorAll('.card'),st=d.getElementById('status'),cur=null,names={ui:'Interface',api:'API',data:'Data',ai:'AI'};
+fb.forEach(function(b){b.addEventListener('click',function(){var l=b.dataset.l;cur=cur===l?null:l;
+ fb.forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.l===cur))});var n=0;
+ cards.forEach(function(c){var m=!cur||c.dataset.l.split(' ').indexOf(cur)>-1;c.classList.toggle('dim',!m);if(m)n++});
+ st.textContent=cur?n+' of '+cards.length+' projects use the '+names[cur]+' layer.':'Select a layer to highlight the projects that use it.';
+ if(cur)d.getElementById('projects').scrollIntoView({behavior:rm?'auto':'smooth'})})});
+var cp=d.getElementById('cp'),cs=d.getElementById('cps'),em='eswarimadhavarapu912@gmail.com';
+cp.addEventListener('click',function(){function ok(){cs.textContent='Email copied. Paste it into your mail app.'}
+ function fb(){var r=d.createRange();r.selectNodeContents(d.getElementById('em'));var x=getSelection();x.removeAllRanges();x.addRange(r);
+  try{d.execCommand('copy')?ok():cs.textContent='Email selected. Press Ctrl+C (or long-press) to copy.'}catch(e){cs.textContent='Email selected. Press Ctrl+C (or long-press) to copy.'}}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(em).then(ok,fb)}else{fb()}});
+})();
+</script>
+</body>
+</html>
